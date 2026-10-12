@@ -335,7 +335,7 @@
   <div><a href="#home" class="logo"><svg class="logo__mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M9 8v16M9 16l9-8M9 16l9 8"/></svg><span>Eplus<b>LTD</b></span></a><p class="muted">Software engineering for ambitious teams.</p>
     <form class="news" id="news"><label for="em" class="sr">Email address</label><input id="em" type="email" placeholder="you@company.com" required><button class="btn btn--sm ripple">Subscribe</button></form><p id="newsMsg" class="muted" role="status"></p></div>
   <nav aria-label="Quick links"><h4>Quick links</h4><a href="#services">Services</a><a href="#projects">Work</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></nav>
-  <div><h4>Contact</h4><a href="mailto:info@eplusltd.co.ke">info@eplusltd.co.ke</a><p class="muted">+254 799 514 830<br>Nairobi, Kenya</p>
+  <div><h4>Contact</h4><a href="mailto:ejuma670@gmail.com">ejuma670@gmail.com</a><p class="muted">+254 799 514 830<br>Nairobi, Kenya</p>
     <div class="social"><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="X">X</a><a href="#" aria-label="GitHub">Gh</a></div></div>
   <div class="footer-map-wrap">
     <h4>Find us in Lower Kabete</h4>
@@ -364,28 +364,85 @@
 
   const bookingForm = document.getElementById("bookingForm");
   const bookingStatus = document.getElementById("bookingStatus");
+  const bookingSubmitButton = bookingForm.querySelector('[type="submit"]');
+  const bookingCooldownKey = "eplusBookingCooldownUntil";
+  const bookingCooldownMs = 3 * 60 * 60 * 1000;
+
+  function refreshBookingCooldown() {
+    const cooldownUntil = Number(localStorage.getItem(bookingCooldownKey)) || 0;
+    const remaining = cooldownUntil - Date.now();
+
+    if (remaining <= 0) {
+      localStorage.removeItem(bookingCooldownKey);
+      bookingSubmitButton.disabled = false;
+      bookingSubmitButton.textContent = "Request a quote";
+      if (bookingStatus.textContent.startsWith("A request was recently sent")) {
+        bookingStatus.textContent = "";
+      }
+      return false;
+    }
+
+    const totalMinutes = Math.ceil(remaining / 60000);
+    const hours = Math.floor(totalMinutes / 60);
+    const minutes = totalMinutes % 60;
+    bookingSubmitButton.disabled = true;
+    bookingSubmitButton.textContent = `Available in ${hours}h ${minutes}m`;
+    bookingStatus.textContent = `A request was recently sent. Please wait ${hours}h ${minutes}m before submitting another.`;
+    return true;
+  }
+
+  refreshBookingCooldown();
+  setInterval(refreshBookingCooldown, 60000);
+  window.addEventListener("storage", (event) => {
+    if (event.key === bookingCooldownKey) refreshBookingCooldown();
+  });
 
   bookingForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
-    const submitButton = bookingForm.querySelector('[type="submit"]');
-    submitButton.disabled = true;
+    if (refreshBookingCooldown()) return;
+
+    bookingSubmitButton.disabled = true;
     bookingStatus.textContent = "Sending your request…";
 
     try {
-      await emailjs.sendForm(
+      const formData = new FormData(bookingForm);
+      const name = formData.get("name").trim();
+      const email = formData.get("email").trim();
+      const service = formData.get("service");
+      const budget = formData.get("budget");
+      const projectDetails = formData.get("message").trim();
+      const templateParams = {
+        name,
+        email,
+        service,
+        budget,
+        project_details: projectDetails,
+        reply_to: email,
+        message: [
+          `Full name: ${name}`,
+          `Email: ${email}`,
+          `Service: ${service}`,
+          `Budget: ${budget}`,
+          "Project details:",
+          projectDetails
+        ].join("\n")
+      };
+
+      await emailjs.send(
         "service_50onn2k",
         "template_0sh87ws",
-        bookingForm
+        templateParams
       );
-      bookingStatus.textContent = "Thanks — your request has been sent.";
+      localStorage.setItem(bookingCooldownKey, String(Date.now() + bookingCooldownMs));
+      refreshBookingCooldown();
       bookingForm.reset();
     } catch (error) {
       console.error("EmailJS error:", error);
       bookingStatus.textContent =
         "Sorry, we couldn't send your request. Please try again or email us directly.";
     } finally {
-      submitButton.disabled = false;
+      if (!refreshBookingCooldown()) bookingSubmitButton.disabled = false;
     }
   });
 </script>
