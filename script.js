@@ -1,5 +1,4 @@
-/* Kestrel Labs: main script. Sections: helpers, loader, smooth scroll,
-   hero, nav, counters, timeline, filters, pricing, swiper, UI extras */
+/* Mirai Labs: page interactions and navigation */
 (() => {
   'use strict';
   const $ = (s, c = document) => c.querySelector(s);
@@ -34,10 +33,8 @@
     if (!reduce) {
       gsap.from(split.words, { y: 60, opacity: 0, stagger: .06, duration: 1, ease: 'power4.out' });
       gsap.from('.hero__copy > :not(h1)', { y: 30, opacity: 0, stagger: .12, delay: .4, duration: .9, ease: 'power3.out' });
-      gsap.from('.fcard', { scale: .7, opacity: 0, stagger: .15, delay: .6, duration: 1, ease: 'back.out(1.6)' });
     }
     type();
-    $$('[data-count]').forEach(el => countUp(el));
   }
   function type() {
     const el = $('#typed'); let w = 0, c = 0, del = false;
@@ -51,18 +48,14 @@
       setTimeout(tick, d);
     })();
   }
-  function countUp(el) {
-    const end = +el.dataset.count, o = { v: 0 };
-    ScrollTrigger.create({ trigger: el, start: 'top 90%', once: true, onEnter: () =>
-      gsap.to(o, { v: end, duration: reduce ? 0 : 2, ease: 'power2.out', onUpdate: () => el.textContent = Math.round(o.v) }) });
-  }
-  $$('[data-count]').forEach(el => { if (!el.closest('.stats')) countUp(el); });
-
   /* Nav: glass shrink, active section, sliding indicator */
   const links = $$('.nav__links a'), ind = $('.nav__ind');
   function moveInd(a) { if (!a) { ind.style.opacity = 0; return; } ind.style.cssText = `opacity:1;left:${a.offsetLeft}px;width:${a.offsetWidth}px`; }
   links.forEach(a => {
-    const sec = $(a.getAttribute('href'));
+    const target = a.getAttribute('href');
+    if (!target || !target.startsWith('#')) return;
+    const sec = $(target);
+    if (!sec) return;
     ScrollTrigger.create({ trigger: sec, start: 'top 55%', end: 'bottom 55%', onToggle: s => { if (s.isActive) { links.forEach(l => l.classList.remove('active')); a.classList.add('active'); moveInd(a); } } });
     a.addEventListener('mouseenter', () => moveInd(a));
   });
@@ -95,12 +88,6 @@
   const pick = p => plans.forEach(x => { x.classList.toggle('is-featured', x === p); x.setAttribute('aria-checked', x === p); });
   plans.forEach(p => { p.addEventListener('click', () => pick(p)); p.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pick(p); } }); });
 
-  /* Testimonials carousel */
-  if ($('#tSwiper')) {
-    new Swiper('#tSwiper', { loop: true, spaceBetween: 24, slidesPerView: 1, autoplay: reduce ? false : { delay: 4500, disableOnInteraction: false },
-      pagination: { el: '.swiper-pagination', clickable: true }, breakpoints: { 760: { slidesPerView: 2 }, 1100: { slidesPerView: 3 } }, a11y: true });
-  }
-
   /* FAQ: animated height on <details> */
   $$('.faq details').forEach(d => {
     const body = d.lastElementChild;
@@ -118,9 +105,8 @@
     b.appendChild(el); setTimeout(() => el.remove(), 600);
   }));
 
-  /* Back to top + newsletter */
+  /* Back to top */
   const top = $('#totop');
   addEventListener('scroll', () => top.classList.toggle('show', scrollY > 700), { passive: true });
   top.addEventListener('click', () => lenis ? lenis.scrollTo(0) : window.scrollTo({ top: 0 }));
-  $('#news').addEventListener('submit', e => { e.preventDefault(); $('#newsMsg').textContent = 'Thanks! You\'re subscribed.'; e.target.reset(); });
 })();
