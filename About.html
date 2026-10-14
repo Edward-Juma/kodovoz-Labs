@@ -3,23 +3,32 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>About Mirai Labs | Engineering the Future with Purpose</title>
-	<meta name="description" content="Meet Mirai Labs, a product engineering studio building thoughtful, scalable digital products from discovery through launch and beyond.">
-	<meta name="theme-color" content="#090c10">
+	<title>About Kodovoz Labs | Engineering with Purpose</title>
+	<meta name="description" content="Meet Kodovoz Labs, a product engineering studio carrying thoughtful ideas into scalable digital products.">
+	<meta name="theme-color" content="#120e0b">
 	<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
+	<script>try{document.documentElement.dataset.theme=localStorage.getItem('kodovozTheme')||'dark'}catch{document.documentElement.dataset.theme='dark'}</script>
+	<script src="theme.js" defer></script>
 </head>
 <body class="about-page">
+	<div class="background-stage" aria-hidden="true">
+		<video class="background-video" autoplay muted loop playsinline preload="auto" tabindex="-1">
+			<source src="Kodovoz Labs Video 1.mp4" type="video/mp4">
+		</video>
+		<div class="background-tint"></div>
+	</div>
 	<a class="skip" href="#main">Skip to content</a>
 	<header class="nav glass about-nav" id="nav">
-		<a href="index.html#home" class="logo" aria-label="Mirai Labs home"><svg class="logo__mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 10h8M4 16h6M12 22l10-10L12 2"/></svg><span>Mirai<b> Labs</b></span></a>
+		<a href="index.html#home" class="logo" aria-label="Kodovoz Labs home"><img class="logo__image" src="assets/kodovoz-logo.svg" alt="Kodovoz Labs"></a>
 		<nav aria-label="Primary"><ul class="nav__links" id="navLinks">
 			<li><a href="index.html#home">Home</a></li><li><a href="index.html#services">Services</a></li><li><a href="index.html#process">Process</a></li><li><a href="index.html#projects">Work</a></li>
 		</ul></nav>
 		<a href="index.html#booking" class="btn btn--sm">Start a project <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+		<button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode" aria-pressed="false" title="Switch to light mode"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 22h4M8.5 14.5a7 7 0 1 1 7 0c-.8.6-1.2 1.4-1.3 2.5h-4.4c-.1-1.1-.5-1.9-1.3-2.5Z"/><path d="M12 1v2M4.2 4.2l1.4 1.4M1 12h2M21 12h2M18.4 5.6l1.4-1.4"/></svg></button>
 		<button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
 	</header>
 
@@ -32,21 +41,21 @@
 					<p class="lead">We partner with startups, businesses, and organizations to turn ideas into reliable, scalable digital products.</p>
 					<div class="hero__cta"><a href="index.html#booking" class="btn">Build with us <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#story" class="btn btn--ghost">Our story</a></div>
 				</div>
-				<div class="about-hero__art" aria-label="Mirai Labs future-focused engineering mark">
+				<div class="about-hero__art" aria-label="Kodovoz Labs engineering mark">
 					<img class="about-hero__image" src="data plartform.jpg" alt="A data platform product concept" fetchpriority="high">
 					<div class="about-orbit" aria-hidden="true"></div>
-					<div class="about-mark"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M18 36h23M18 50h17M41 66l30-30L41 6"/><circle cx="57" cy="58" r="26" opacity=".42"/><path d="M57 44v28M43 58h28" opacity=".65"/></svg><span>MIRAI / 未来</span></div>
+					<div class="about-mark"><img class="about-mark__symbol" src="assets/kodovoz-mark.svg" alt=""><span>KODOVOZ / КОДОВОЗ</span></div>
 				</div>
 			</div>
 		</section>
 
 		<section class="about-section" id="story"><div class="container about-intro">
 			<div class="about-intro__copy">
-				<p class="eyebrow">Why Mirai Labs?</p>
-				<h2>Tomorrow is something we build.</h2>
-				<p>Mirai (未来) is the Japanese word for "future." We chose it because technology should do more than solve today's problems: it should create opportunities for tomorrow.</p>
-				<p>Labs represents curiosity, experimentation, and continuous improvement. We explore ideas, test solutions, refine experiences, and build products designed to evolve alongside the businesses they serve.</p>
-				<p>From concept to deployment, we bring strategy, design, engineering, and cloud technologies together to create products with lasting business value. We build for long-term success, not just launch day.</p>
+				<p class="eyebrow">Why Kodovoz Labs?</p>
+				<h2>We carry good ideas into working software.</h2>
+				<p><strong>Kodovoz</strong> (кодовоз) is a playful Russian tech-slang compound, roughly “code hauler”: <em>kod</em> means “code,” and the word draws on <em>vozit’</em>, “to haul” or “carry.” It can jokingly describe a developer who carries a lot of code to get a job done.</p>
+				<p>We give the phrase a constructive meaning: carrying a product from first idea to dependable delivery. At Kodovoz Labs, craft matters as much as momentum: we make thoughtful technical choices, keep the work understandable, and move forward together.</p>
+				<p>Labs stands for curiosity and continuous improvement. We explore, test, refine, and build digital products designed to grow with the people and businesses that rely on them.</p>
 			</div>
 			<blockquote class="about-intro__aside">For us, the future isn't just a destination. It's something we engineer every day.</blockquote>
 		</div></section>
@@ -74,12 +83,12 @@
 		<section class="about-section"><div class="container">
 			<div class="about-heading"><p class="eyebrow">What we build</p><h2>Digital products made to move business forward.</h2></div>
 			<div class="service-grid">
-				<article class="service-item"><svg class="service-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14l-2 2 2 2M16 14l2 2-2 2"/></svg><h3>Web applications</h3><p>Responsive, high-performance applications and dashboards.</p></article>
-				<article class="service-item"><svg class="service-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="7" y="2" width="10" height="20" rx="3"/><path d="M11 18h2"/></svg><h3>Mobile applications</h3><p>Native and cross-platform apps for iOS and Android.</p></article>
-				<article class="service-item"><svg class="service-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 18a4 4 0 0 1-.5-8A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9z"/></svg><h3>SaaS & cloud platforms</h3><p>Scalable software, infrastructure, and backend systems.</p></article>
-				<article class="service-item"><svg class="service-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v4m0 12v4M2 12h4m12 0h4M5 5l3 3m8 8 3 3m0-14-3 3m-8 8-3 3"/></svg><h3>AI solutions</h3><p>Useful intelligence, automation, and data-driven insights.</p></article>
-				<article class="service-item"><svg class="service-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6h16M4 12h16M4 18h16"/><circle cx="8" cy="6" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="10" cy="18" r="2"/></svg><h3>APIs & backend systems</h3><p>Secure architectures and integrations that power products.</p></article>
-				<article class="service-item"><svg class="service-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20l4-1L20 7l-3-3L5 16zM14 6l3 3"/></svg><h3>UI/UX design</h3><p>Intuitive, accessible experiences grounded in user needs.</p></article>
+				<a href="service.html?service=web-applications" class="service-item"><svg class="service-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14l-2 2 2 2M16 14l2 2-2 2"/></svg><h3>Web applications</h3><p>Responsive, high-performance applications and dashboards.</p></a>
+				<a href="service.html?service=mobile-apps" class="service-item"><svg class="service-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="7" y="2" width="10" height="20" rx="3"/><path d="M11 18h2"/></svg><h3>Mobile applications</h3><p>Native and cross-platform apps for iOS and Android.</p></a>
+				<a href="service.html?service=cloud-devops" class="service-item"><svg class="service-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 18a4 4 0 0 1-.5-8A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9z"/></svg><h3>SaaS & cloud platforms</h3><p>Scalable software, infrastructure, and backend systems.</p></a>
+				<a href="service.html?service=ai-integration" class="service-item"><svg class="service-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v4m0 12v4M2 12h4m12 0h4M5 5l3 3m8 8 3 3m0-14-3 3m-8 8-3 3"/></svg><h3>AI solutions</h3><p>Useful intelligence, automation, and data-driven insights.</p></a>
+				<a href="service.html?service=security-reviews" class="service-item"><svg class="service-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6h16M4 12h16M4 18h16"/><circle cx="8" cy="6" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="10" cy="18" r="2"/></svg><h3>Security reviews</h3><p>Practical code, architecture, and configuration reviews.</p></a>
+				<a href="service.html?service=product-design" class="service-item"><svg class="service-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20l4-1L20 7l-3-3L5 16zM14 6l3 3"/></svg><h3>UI/UX design</h3><p>Intuitive, accessible experiences grounded in user needs.</p></a>
 			</div>
 		</div></section>
 
@@ -128,8 +137,8 @@
 		</div></section>
 
 		<section class="about-section"><div class="container">
-			<div class="about-heading"><p class="eyebrow">Why choose Mirai Labs?</p><h2>A technology partner you can trust.</h2><p class="muted">We combine thoughtful design, modern engineering, and cloud expertise to make progress feel clear and dependable.</p></div>
-			<div class="commitment"><div><blockquote>We don't simply deliver software. We build digital products that help shape the future of businesses, communities, and industries.</blockquote><cite>The Mirai Labs commitment</cite></div><a href="index.html#booking" class="btn">Start a conversation <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+			<div class="about-heading"><p class="eyebrow">Why choose Kodovoz Labs?</p><h2>A technology partner you can trust.</h2><p class="muted">We combine thoughtful design, modern engineering, and cloud expertise to make progress feel clear and dependable.</p></div>
+			<div class="commitment"><div><blockquote>We don't simply deliver software. We carry digital products from clear ideas to dependable tools that help businesses and communities move forward.</blockquote><cite>The Kodovoz Labs commitment</cite></div><a href="index.html#booking" class="btn">Start a conversation <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
 		</div></section>
 
 		<section class="about-cta"><div class="container">
@@ -138,11 +147,17 @@
 	</main>
 
 	<footer class="footer about-footer"><div class="container fgrid">
-		<div><a href="index.html#home" class="logo"><svg class="logo__mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 10h8M4 16h6M12 22l10-10L12 2"/></svg><span>Mirai<b> Labs</b></span></a><p class="muted">Software engineering for ambitious teams.</p></div>
-		<nav aria-label="Quick links"><h4>Explore</h4><a href="index.html#services">Services</a><a href="index.html#projects">Work</a><a href="index.html#pricing">Pricing</a></nav>
-		<div><h4>Contact</h4><a href="mailto:ejuma670@gmail.com">ejuma670@gmail.com</a><p class="muted">+254 799 514 830<br>Nairobi, Kenya</p></div>
+		<div><a href="index.html#home" class="logo" aria-label="Kodovoz Labs home"><img class="logo__image" src="assets/kodovoz-logo.svg" alt="Kodovoz Labs"></a><p class="muted">Software engineering for ambitious teams.</p></div>
+		<nav aria-label="Services"><h4>Services</h4><a href="service.html?service=web-applications">Web applications</a><a href="service.html?service=mobile-apps">Mobile apps</a><a href="service.html?service=cloud-devops">Cloud &amp; DevOps</a><a href="service.html?service=ai-integration">AI integration</a><a href="service.html?service=security-reviews">Security reviews</a><a href="service.html?service=product-design">Product design</a></nav>
+		<div><h4>Contact</h4><a href="mailto:kodovozlabs@gmail.com">kodovozlabs@gmail.com</a><p class="muted">+254 799 514 830<br>Nairobi, Kenya</p></div>
 		<div><h4>Next step</h4><p class="muted">Have a product challenge to solve?</p><a class="btn btn--sm" href="index.html#booking">Talk with our team</a></div>
-	</div><p class="copy muted center">© 2026 Mirai Labs. All rights reserved.</p></footer>
+		<div class="social-block"><h4>Follow Kodovoz Labs</h4><div class="social-links">
+			<a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8.5v11M6.5 5.5v.01M11 19.5v-6a4 4 0 0 1 8 0v6M11 11v8.5"/></svg></a>
+			<a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.8h.01"/></svg></a>
+			<a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 21v-8h3l.5-4H14V7c0-1.2.4-2 2-2h1.7V1.4C17 1.2 15.8 1 14.5 1 11.4 1 9.5 2.9 9.5 6.4V9H6v4h3.5v8"/></svg></a>
+			<a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 3 16 18M20 3 4 21M4 3h4l12 18h-4"/></svg></a>
+		</div><p class="muted social-note">Connect with us on social media.</p></div>
+	</div><p class="copy muted center">© 2026 Kodovoz Labs. All rights reserved.</p></footer>
 
 	<script>
 		const menuButton = document.getElementById('burger');

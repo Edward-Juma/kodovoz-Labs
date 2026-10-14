@@ -1,4 +1,4 @@
-/* Mirai Labs: page interactions and navigation */
+/* Kodovoz Labs: page interactions and navigation */
 (() => {
   'use strict';
   const $ = (s, c = document) => c.querySelector(s);
