@@ -1,1 +1,0 @@
-This folder is reserved for static assets such as logos, favicons, and images.
