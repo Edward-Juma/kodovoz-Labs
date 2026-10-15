@@ -34,19 +34,13 @@
 <a class="skip" href="#main">Skip to content</a>
 <div class="loader" id="loader" role="status" aria-label="Loading Kodovoz Labs"><div class="loader__brand"><img class="loader__logo" src="assets/kodovoz-logo.svg" alt="Kodovoz Labs"></div><div class="loader__bar" aria-hidden="true"><span></span></div></div>
 <div class="cursor" id="cursor" aria-hidden="true"></div>
-<div class="background-stage" aria-hidden="true">
-  <video class="background-video" autoplay muted loop playsinline preload="metadata" tabindex="-1">
-    <source src="Kodovoz Labs Video 1.mp4" type="video/mp4">
-  </video>
-  <div class="background-tint"></div>
-</div>
 <div class="noise" aria-hidden="true"></div>
 
 <header class="nav glass" id="nav">
   <a href="#home" class="logo" aria-label="Kodovoz Labs home"><img class="logo__image" src="assets/kodovoz-logo.svg" alt="Kodovoz Labs"></a>
   <nav aria-label="Primary"><ul class="nav__links" id="navLinks">
     <li><a href="About.html">About</a></li><li><a href="#services">Services</a></li><li><a href="#why">Why us</a></li><li><a href="#process">Process</a></li>
-    <li><a href="#projects">Work</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#faq">FAQ</a></li>
+    <li><a href="#projects">Work</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="#faq">FAQ</a></li>
     <li class="nav__ind" aria-hidden="true"></li></ul></nav>
   <a href="#booking" class="btn btn--sm magnetic">Start a project <svg class="ico"><use href="#i-arrow"/></svg></a>
   <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode" aria-pressed="false" title="Switch to light mode"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 22h4M8.5 14.5a7 7 0 1 1 7 0c-.8.6-1.2 1.4-1.3 2.5h-4.4c-.1-1.1-.5-1.9-1.3-2.5Z"/><path d="M12 1v2M4.2 4.2l1.4 1.4M1 12h2M21 12h2M18.4 5.6l1.4-1.4"/></svg></button>
@@ -174,79 +168,9 @@
     <p class="muted">From launch-ready websites to long-term product care, we keep everything clear and practical.</p>
   </div>
 
-  <div class="pricing-grid" role="radiogroup" aria-label="Pricing plans">
-    <article class="pricing-card" role="radio" aria-checked="false" tabindex="0">
-      <div class="plan-head"><span class="plan-tag">Starter</span><h3>Launch Website</h3></div>
-      <div class="price-line"><span class="currency">KSh</span><strong>49,000</strong><small>one-time</small></div>
-      <p class="muted">For small businesses that need a polished web presence fast.</p>
-      <ul>
-        <li>Up to 5 pages</li>
-        <li>Mobile-friendly design</li>
-        <li>Basic SEO setup</li>
-        <li>Domain and hosting guidance</li>
-      </ul>
-      <div class="support-box support-box--soft">
-        <span class="support-label">Monthly support</span>
-        <strong>KSh 8,000/mo</strong>
-        <small>Basic maintenance & updates</small>
-      </div>
-      <a href="#booking" class="btn btn--ghost btn--sm ripple">Get started</a>
-    </article>
-
-    <article class="pricing-card featured" role="radio" aria-checked="true" tabindex="0">
-      <span class="plan-badge">Most popular</span>
-      <div class="plan-head"><span class="plan-tag">Growth</span><h3>Business Site</h3></div>
-      <div class="price-line"><span class="currency">KSh</span><strong>119,000</strong><small>one-time</small></div>
-      <p class="muted">Built for brands that want stronger lead generation and trust.</p>
-      <ul>
-        <li>Custom homepage and sections</li>
-        <li>Lead forms and CRM setup</li>
-        <li>Content management</li>
-        <li>Brand-focused UX design</li>
-      </ul>
-      <div class="support-box support-box--blue">
-        <span class="support-label">Security & updates</span>
-        <strong>KSh 15,000/mo</strong>
-        <small>Security patches, backups & fixes</small>
-      </div>
-      <a href="#booking" class="btn btn--sm ripple">Choose Growth</a>
-    </article>
-
-    <article class="pricing-card" role="radio" aria-checked="false" tabindex="0">
-      <div class="plan-head"><span class="plan-tag">Scale</span><h3>Product Build</h3></div>
-      <div class="price-line"><span class="currency">KSh</span><strong>210,000</strong><small>one-time</small></div>
-      <p class="muted">For businesses ready to launch a real digital product or platform.</p>
-      <ul>
-        <li>Custom dashboards or app UI</li>
-        <li>API and third-party integrations</li>
-        <li>Admin panel and workflow logic</li>
-        <li>Priority technical support</li>
-      </ul>
-      <div class="support-box support-box--green">
-        <span class="support-label">Improvement retainer</span>
-        <strong>KSh 25,000/mo</strong>
-        <small>Feature improvements & enhancements</small>
-      </div>
-      <a href="#booking" class="btn btn--ghost btn--sm ripple">Talk to us</a>
-    </article>
-
-    <article class="pricing-card" role="radio" aria-checked="false" tabindex="0">
-      <div class="plan-head"><span class="plan-tag">Ongoing</span><h3>Care & Support</h3></div>
-      <div class="price-line"><span class="currency">KSh</span><strong>35,000</strong><small>monthly</small></div>
-      <p class="muted">Best for existing sites or apps that need continuous care.</p>
-      <ul>
-        <li>Weekly monitoring</li>
-        <li>Security updates</li>
-        <li>Bug fixes and maintenance</li>
-        <li>Feature requests and QA</li>
-      </ul>
-      <div class="support-box support-box--purple">
-        <span class="support-label">Priority support</span>
-        <strong>KSh 35,000/mo</strong>
-        <small>Ongoing maintenance, updates & support</small>
-      </div>
-      <a href="#booking" class="btn btn--ghost btn--sm ripple">Book support</a>
-    </article>
+  <div class="pricing-teaser">
+    <p class="muted">Explore package prices, included deliverables and ongoing support options.</p>
+    <a href="pricing.html" class="btn btn--sm ripple">View services & pricing <svg class="ico"><use href="#i-arrow"/></svg></a>
   </div>
 </div></section>
 
@@ -320,7 +244,7 @@
 <footer class="footer"><div class="container fgrid">
   <div><a href="#home" class="logo" aria-label="Kodovoz Labs home"><img class="logo__image" src="assets/kodovoz-logo.svg" alt="Kodovoz Labs"></a><p class="muted">Software engineering for ambitious teams.</p></div>
   <nav aria-label="Services"><h4>Services</h4><a href="service.html?service=web-applications">Web applications</a><a href="service.html?service=mobile-apps">Mobile apps</a><a href="service.html?service=cloud-devops">Cloud &amp; DevOps</a><a href="service.html?service=ai-integration">AI integration</a><a href="service.html?service=security-reviews">Security reviews</a><a href="service.html?service=product-design">Product design</a></nav>
-  <nav aria-label="Explore"><h4>Explore</h4><a href="About.html">About Kodovoz Labs</a><a href="#projects">Work</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="privacy-policy.html">Privacy Policy</a></nav>
+  <nav aria-label="Explore"><h4>Explore</h4><a href="About.html">About Kodovoz Labs</a><a href="#projects">Work</a><a href="pricing.html">Pricing</a><a href="#faq">FAQ</a><a href="privacy-policy.html">Privacy Policy</a></nav>
   <div><h4>Contact</h4><a href="mailto:kodovozlabs@gmail.com">kodovozlabs@gmail.com</a><p class="muted">+254 799 514 830<br>Nairobi, Kenya</p>
   </div>
   <div class="footer-map-wrap">
