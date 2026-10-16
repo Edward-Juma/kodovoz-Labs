@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://kodovozlabs.vercel.app/</loc>
+  </url>
+  <url>
+    <loc>https://kodovozlabs.vercel.app/About.html</loc>
+  </url>
+  <url>
+    <loc>https://kodovozlabs.vercel.app/pricing.html</loc>
+  </url>
+  <url>
+    <loc>https://kodovozlabs.vercel.app/privacy-policy.html</loc>
+  </url>
+  <url>
+    <loc>https://kodovozlabs.vercel.app/service.html?service=web-applications</loc>
+  </url>
+  <url>
+    <loc>https://kodovozlabs.vercel.app/service.html?service=mobile-apps</loc>
+  </url>
+  <url>
+    <loc>https://kodovozlabs.vercel.app/service.html?service=cloud-devops</loc>
+  </url>
+  <url>
+    <loc>https://kodovozlabs.vercel.app/service.html?service=ai-integration</loc>
+  </url>
+  <url>
+    <loc>https://kodovozlabs.vercel.app/service.html?service=security-reviews</loc>
+  </url>
+  <url>
+    <loc>https://kodovozlabs.vercel.app/service.html?service=product-design</loc>
+  </url>
+</urlset>
