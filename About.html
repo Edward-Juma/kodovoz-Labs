@@ -15,6 +15,10 @@
 	<script src="theme.js" defer></script>
 </head>
 <body class="about-page">
+	<aside class="launch-offer" aria-label="Founding client offer">
+		<p>Founding client offer: save up to 20% on your first project. <span>Limited launch spots.</span></p>
+		<a href="index.html#booking">Claim offer <span aria-hidden="true">&rarr;</span></a>
+	</aside>
 	<a class="skip" href="#main">Skip to content</a>
 	<header class="nav glass about-nav" id="nav">
 		<a href="index.html#home" class="logo" aria-label="Kodovoz Labs home"><img class="logo__image" src="assets/kodovoz-logo.svg" alt="Kodovoz Labs"></a>
@@ -154,29 +158,6 @@
 		</div><p class="muted social-note">Connect with us on social media.</p></div>
 	</div><p class="copy muted center">© 2026 Kodovoz Labs. All rights reserved.</p></footer>
 
-	<script>
-		const menuButton = document.getElementById('burger');
-		const menu = document.getElementById('navLinks');
-		menuButton.addEventListener('click', () => {
-			const isOpen = menu.classList.toggle('open');
-			menuButton.setAttribute('aria-expanded', String(isOpen));
-		});
-		menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-			menu.classList.remove('open');
-			menuButton.setAttribute('aria-expanded', 'false');
-		}));
-		const processCards = document.querySelectorAll('.process-card');
-		if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-			const observer = new IntersectionObserver(entries => entries.forEach(entry => {
-				if (entry.isIntersecting) {
-					entry.target.classList.add('is-visible');
-					observer.unobserve(entry.target);
-				}
-			}), { threshold: 0.12 });
-			processCards.forEach(card => observer.observe(card));
-		} else {
-			processCards.forEach(card => card.classList.add('is-visible'));
-		}
 	</script>
 	<script src="https://code.tidio.co/5jytmloxn0cgqogcyltpmhxa3axeycdc.js" async></script>
 </body>

@@ -89,8 +89,12 @@ a{color:inherit;text-decoration:none}ul,ol{list-style:none;padding:0}
 @media (hover:hover) and (pointer:fine){.cursor{display:block}}
 
 /* ===== 5. NAV ===== */
+.launch-offer{position:sticky;top:0;z-index:140;min-height:42px;padding:.45rem 1rem;display:flex;align-items:center;justify-content:center;gap:.7rem;background:#f5c400;color:#17130a;font-size:.84rem;font-weight:600;line-height:1.25;text-align:center}
+.launch-offer p{margin:0}
+.launch-offer a{display:inline-flex;align-items:center;gap:.35rem;flex:none;padding:.28rem .72rem;border-radius:999px;background:#17130a;color:#fff;font-size:.8rem;font-weight:700}
+.launch-offer a:hover{background:#332800}
 .nav{
-  position:fixed;top:16px;left:50%;transform:translateX(-50%);width:min(1120px,94%);z-index:100;
+  position:fixed;top:54px;left:50%;transform:translateX(-50%);width:min(1120px,94%);z-index:100;
   display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding:.72rem .8rem .72rem 1.2rem;border-radius:999px;
   background:rgba(23,18,14,0.76);border:1px solid rgba(255,255,255,0.13);backdrop-filter:blur(26px) saturate(145%);
   box-shadow:inset 0 1px 0 rgba(255,255,255,0.14), 0 14px 36px rgba(0,0,0,0.18);
