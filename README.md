@@ -79,4 +79,4 @@ script.js             Standalone website interactions
 
 ## Updating Content
 
-Edit the `services` array in `lib/site-data.ts` to change the Next.js service cards and detail pages. Update the relevant files under `app/` for Next.js page copy, or the corresponding root-level HTML file for the standalone version. Keep the two versions aligned when changing shared company details, services, or contact information..
+Edit the `services` array in `lib/site-data.ts` to change the Next.js service cards and detail pages. Update the relevant files under `app/` for Next.js page copy, or the corresponding root-level HTML file for the standalone version. Keep the two versions aligned when changing shared company details, services, or contact information.
